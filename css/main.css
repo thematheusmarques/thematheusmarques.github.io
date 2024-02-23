@@ -80,7 +80,20 @@ body {
     backface-visibility: hidden
 }
 
-.clients.owl-carousel .owl-item .client-block a[href*="servopa"] img {
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: black;
+    border: 0px solid #ccc;
+    border-radius: 14px;
+    z-index: 1;
+}
+
+.empresas.owl-carousel .owl-item .client-block a[href*="servopa"] img {
     max-width: 100px; /* Largura máxima desejada */
     max-height: 80px; /* Altura máxima desejada */
     width: 100%;
@@ -2046,9 +2059,39 @@ ul.social-links li:last-child a {
     border: 2px solid #222;
     -moz-border-radius: 9px;
     -webkit-border-radius: 9px;
-    border-radius: 9px;
+    border-radius: 9px; 
     height: 8px;
     padding: 0
+}
+
+/* Skills Porcentage */
+
+#skill_1 .skill-percentage {
+    width: 100% !important;
+}
+
+#skill_2 .skill-percentage {
+    width: 100% !important;
+}
+
+#skill_3 .skill-percentage {
+    width: 55% !important;
+}
+
+#skill_4 .skill-percentage {
+    width: 40% !important;
+}
+
+#skill_5 .skill-percentage {
+    width: 85% !important;
+}
+
+#skill_6 .skill-percentage {
+    width: 100% !important;
+}
+
+#skill_7 .skill-percentage {
+    width: 80% !important;
 }
 
 .service-block {
@@ -2186,32 +2229,32 @@ ul.social-links li:last-child a {
     margin: 0 auto
 }
 
-.clients.owl-carousel .client-block {
+.empresas.owl-carousel .client-block {
     padding: 10px 15px 15px;
     margin-bottom: 15px
 }
 
-.clients.owl-carousel .owl-item img {
+.empresas.owl-carousel .owl-item img {
     display: block;
     width: 100%;
     max-width: 100px
 }
 
-.clients.owl-carousel .owl-dots,
-.testimonials.owl-carousel .owl-dots {
+.empresas.owl-carousel .owl-dots,
+.clientes-feedbacks.owl-carousel .owl-dots {
     position: relative;
     width: 100%;
     text-align: center
 }
 
-.clients.owl-carousel .owl-dot,
-.testimonials.owl-carousel .owl-dot {
+.empresas.owl-carousel .owl-dot,
+.clientes-feedbacks.owl-carousel .owl-dot {
     display: inline-block;
     margin: 3px 0
 }
 
-.clients.owl-carousel .owl-dot span,
-.testimonials.owl-carousel .owl-dot span {
+.empresas.owl-carousel .owl-dot span,
+.clientes-feedbacks.owl-carousel .owl-dot span {
     display: block;
     height: 3px;
     background-color: #454545;
@@ -2225,15 +2268,15 @@ ul.social-links li:last-child a {
     transition: all .25s ease-in-out
 }
 
-.clients.owl-carousel .owl-dot.active span,
-.clients.owl-carousel .owl-dot:hover span,
-.testimonials.owl-carousel .owl-dot.active span,
-.testimonials.owl-carousel .owl-dot:hover span {
+.empresas.owl-carousel .owl-dot.active span,
+.empresas.owl-carousel .owl-dot:hover span,
+.clientes-feedbacks.owl-carousel .owl-dot.active span,
+.clientes-feedbacks.owl-carousel .owl-dot:hover span {
     background-color: #007ced
 }
 
-.clients.owl-carousel .owl-dot.active span,
-.testimonials.owl-carousel .owl-dot.active span {
+.empresas.owl-carousel .owl-dot.active span,
+.clientes-feedbacks.owl-carousel .owl-dot.active span {
     background-color: #007ced;
     width: 30px
 }
@@ -2740,27 +2783,27 @@ ul.social-links li:last-child a {
     float: right
 }
 
-.testimonials {
+.clientes-feedbacks {
     width: 100%
 }
 
-.testimonials.owl-carousel .owl-nav,
-.clients.owl-carousel .owl-nav {
+.clientes-feedbacks.owl-carousel .owl-nav,
+.empresas.owl-carousel .owl-nav {
     position: absolute;
     text-align: right;
     right: 0;
     bottom: 5px
 }
 
-.testimonials.owl-carousel .owl-nav .owl-prev,
-.clients.owl-carousel .owl-nav .owl-prev {
+.clientes-feedbacks.owl-carousel .owl-nav .owl-prev,
+.empresas.owl-carousel .owl-nav .owl-prev {
     margin-right: 3px
 }
 
-.testimonials.owl-carousel .owl-nav .owl-prev,
-.testimonials.owl-carousel .owl-nav .owl-next,
-.clients.owl-carousel .owl-nav .owl-prev,
-.clients.owl-carousel .owl-nav .owl-next {
+.clientes-feedbacks.owl-carousel .owl-nav .owl-prev,
+.clientes-feedbacks.owl-carousel .owl-nav .owl-next,
+.empresas.owl-carousel .owl-nav .owl-prev,
+.empresas.owl-carousel .owl-nav .owl-next {
     display: inline-block;
     font-family: "font awesome 5 free";
     font-weight: 900;
@@ -2776,19 +2819,19 @@ ul.social-links li:last-child a {
     transition-duration: .2s
 }
 
-.testimonials.owl-carousel .owl-nav .owl-prev:hover,
-.testimonials.owl-carousel .owl-nav .owl-next:hover,
-.clients.owl-carousel .owl-nav .owl-prev:hover,
-.clients.owl-carousel .owl-nav .owl-next:hover {
+.clientes-feedbacks.owl-carousel .owl-nav .owl-prev:hover,
+.clientes-feedbacks.owl-carousel .owl-nav .owl-next:hover,
+.empresas.owl-carousel .owl-nav .owl-prev:hover,
+.empresas.owl-carousel .owl-nav .owl-next:hover {
     color: #fff;
     background-color: #007ced;
     border-color: #007ced
 }
 
-.testimonials.owl-carousel .owl-nav .owl-prev:before,
-.testimonials.owl-carousel .owl-nav .owl-next:before,
-.clients.owl-carousel .owl-nav .owl-prev:before,
-.clients.owl-carousel .owl-nav .owl-next:before {
+.clientes-feedbacks.owl-carousel .owl-nav .owl-prev:before,
+.clientes-feedbacks.owl-carousel .owl-nav .owl-next:before,
+.empresas.owl-carousel .owl-nav .owl-prev:before,
+.empresas.owl-carousel .owl-nav .owl-next:before {
     position: relative;
     margin: 2px;
     width: 22px;
@@ -2800,13 +2843,13 @@ ul.social-links li:last-child a {
     cursor: pointer
 }
 
-.testimonials.owl-carousel .owl-nav .owl-prev:before,
-.clients.owl-carousel .owl-nav .owl-prev:before {
+.clientes-feedbacks.owl-carousel .owl-nav .owl-prev:before,
+.empresas.owl-carousel .owl-nav .owl-prev:before {
     content: "\f053"
 }
 
-.testimonials.owl-carousel .owl-nav .owl-next:before,
-.clients.owl-carousel .owl-nav .owl-next:before {
+.clientes-feedbacks.owl-carousel .owl-nav .owl-next:before,
+.empresas.owl-carousel .owl-nav .owl-next:before {
     content: "\f054"
 }
 
