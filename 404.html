@@ -6,14 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Site não encontrado</title>
-
     <link rel="stylesheet" href="css/styleerror.css">
 </head>
 <body>
     <div>
         <p id="error">E <span>r</span>ror</p>
         <p id="code">4<span>0</span><span>4</span></p>
+        <p id="error2">Redirecionando em <br> <span id="countdown">5</span> segundos...</p>
     </div>
 
+    <script>
+        function redirect() {
+            var countdownElement = document.getElementById("countdown");
+            var countdownValue = parseInt(countdownElement.innerText);
+            countdownValue--;
+            countdownElement.innerText = countdownValue;
+            if (countdownValue <= 0) {
+                window.location.href = "/index.html";
+            } else {
+                setTimeout(redirect, 1000);
+            }
+        }
+
+        setTimeout(redirect, 1000);
+    </script>
 </body>
 </html>
